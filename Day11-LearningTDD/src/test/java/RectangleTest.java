@@ -62,7 +62,7 @@ public class RectangleTest {
     @Nested
     class TestingPerimeterFunction {
         @Test
-        public void perimeterOfRectangleOfLengthFiveAndBreadthFiveIsTwentyFive() {
+        public void perimeterOfRectangleOfLengthFiveAndBreadthFiveIsTwenty() {
 
             double answer = rectangle.perimeter(5, 5);
             double expected = 20;
@@ -70,7 +70,7 @@ public class RectangleTest {
         }
 
         @Test
-        public void perimeterOfRectangleOfLengthFiveAndBreadthTenIsFifty() {
+        public void perimeterOfRectangleOfLengthFiveAndBreadthTenIsThirty() {
 
             double answer = rectangle.perimeter(5, 10);
             double expected = 30;
@@ -78,7 +78,7 @@ public class RectangleTest {
         }
 
         @Test
-        public void perimeterOfRectangleOfLengthFourAndBreadthFiveIsTwenty() {
+        public void perimeterOfRectangleOfLengthFourAndBreadthFiveIsEighty() {
 
             double answer = rectangle.perimeter(4, 5);
             double expected = 18;
@@ -86,7 +86,7 @@ public class RectangleTest {
         }
 
         @Test
-        public void perimeterOfRectangleOfLengthTwoAndBreadthFourIsEight() {
+        public void perimeterOfRectangleOfLengthTwoAndBreadthFourIsTwelve() {
 
             double answer = rectangle.perimeter(2, 4);
             double expected = 12;
