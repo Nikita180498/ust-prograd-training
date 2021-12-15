@@ -1,0 +1,9 @@
+Dec 15, 2021 12:57:45 PM CurrencyTask.CurrencyMain main
+INFO: Program Started...
+
+Dec 15, 2021 12:57:48 PM CurrencyTask.CurrencyMain main
+INFO: User selected INR to USD
+Dec 15, 2021 12:57:51 PM CurrencyTask.CurrencyMain main
+INFO: User entered amount : 2000.0
+Dec 15, 2021 12:57:51 PM CurrencyTask.CurrencyMain main
+INFO: Program Stopped...
