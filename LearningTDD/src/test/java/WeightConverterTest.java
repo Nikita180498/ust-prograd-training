@@ -20,7 +20,17 @@ class WeightConverterTest {
     class KilogramToGramTest{
         @Test
         public void checkIfOneGramIsEqualToGram(){
-            double actualWeight = weightConverter.gramToGram(1);
+            double actualWeight = weightConverter.kilogramToGram(1);
+            double expectedWeight = 1;
+            assertEquals(expectedWeight, actualWeight);
+        }
+    }
+
+    @Nested
+    class GramToKilogramTest{
+        @Test
+        public void checkIfOneGramIsEqualToGram(){
+            double actualWeight = weightConverter.kilogramToGram(1);
             double expectedWeight = 1;
             assertEquals(expectedWeight, actualWeight);
         }
