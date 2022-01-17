@@ -1,0 +1,69 @@
+
+  <div class="row row-cols-1 row-cols-md-4 g-6">
+      <div class="col">
+          <div class="card" >
+
+              <div class="card-body">
+                  <h5 class="title"><span th:text=" ${movieName}"/></h5>
+                  <small><p class="title">UA    Telugu,Tamil,Malayalam</p></small>
+                  <a href="@{/movieShow/{id} (id=${id})}"><button class="button button1">Book</button></a>
+              </div>
+          </div>
+      </div>
+
+      <div class="col">
+          <div class="card">
+              <img src="https://in.bmscdn.com/discovery-catalog/events/tr:w-400,h-400,bg-CCCCCC:w-400.0,h-400.0,cm-pad_resize,bg-000000,fo-top:oi-discovery-catalog@@icons@@heart_202006300400.png,ox-24,oy-400,ow-40:ote-ODklICAxMTNrIHZvdGVz,ots-30,otc-FFFFFF,oy-620,ox-80/et00062705-xpmgjnkqam-portrait.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                  <h5 class="title">83</h5>
+                  <small><p class="title">U    Hindi,Telugu,Tamil,Kannada</p></small>
+                  <a href="@{/show/{id} (id=${id})}"><button class="button button1">Book</button></a>
+               </div>
+          </div>
+      </div>
+
+      <div class="col">
+           <div class="card">
+             <img src="https://in.bmscdn.com/discovery-catalog/events/tr:w-400,h-400,bg-CCCCCC:w-400.0,h-400.0,cm-pad_resize,bg-000000,fo-top:oi-discovery-catalog@@icons@@heart_202006300400.png,ox-24,oy-400,ow-40:ote-OTIlICA0MDlrIHZvdGVz,ots-30,otc-FFFFFF,oy-620,ox-80/et00310790-zwearbqxyz-portrait.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="title">Spider-Man: No Way Home</h5>
+                    <small><p class="title">UA    English,Hindi,Telugu,Tamil</p></small>
+                    <a href="@{/show/{id} (id=${id})}"><button class="button button1">Book</button></a>
+                </div>
+         </div>
+      </div>
+
+      <div class="col">
+          <div class="card">
+              <img src="https://in.bmscdn.com/discovery-catalog/events/tr:w-400,h-400,bg-CCCCCC:w-400.0,h-400.0,cm-pad_resize,bg-000000,fo-top:oi-discovery-catalog@@icons@@heart_202006300400.png,ox-24,oy-400,ow-40:ote-OTIlICA0MDlrIHZvdGVz,ots-30,otc-FFFFFF,oy-620,ox-80/et00310790-zwearbqxyz-portrait.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                  <h5 class="title">Spider-Man: No Way Home</h5>
+                  <small><p class="title">UA    English,Hindi,Telugu,Tamil</p></small>
+                  <a href="@{/show/{id} (id=${id})}"><button class="button button1">Book</button></a>
+              </div>
+          </div>
+      </div>
+
+      <div class="col">
+          <div class="card">
+              <img src="https://in.bmscdn.com/discovery-catalog/events/tr:w-400,h-400,bg-CCCCCC:w-400.0,h-400.0,cm-pad_resize,bg-000000,fo-top:oi-discovery-catalog@@icons@@heart_202006300400.png,ox-24,oy-400,ow-40:ote-OTIlICA0MDlrIHZvdGVz,ots-30,otc-FFFFFF,oy-620,ox-80/et00310790-zwearbqxyz-portrait.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                  <h5 class="title">Spider-Man: No Way Home</h5>
+                  <small><p class="title">UA    English,Hindi,Telugu,Tamil</p></small>
+                  <a href="@{/show/{id} (id=${id})}"><button class="button button1">Book</button></a>
+              </div>
+          </div>
+      </div>
+
+      <div class="col">
+          <div class="card">
+              <img src="https://in.bmscdn.com/discovery-catalog/events/tr:w-400,h-400,bg-CCCCCC:w-400.0,h-400.0,cm-pad_resize,bg-000000,fo-top:oi-discovery-catalog@@icons@@heart_202006300400.png,ox-24,oy-400,ow-40:ote-OTIlICA0MDlrIHZvdGVz,ots-30,otc-FFFFFF,oy-620,ox-80/et00310790-zwearbqxyz-portrait.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                  <h5 class="title">Spider-Man: No Way Home</h5>
+                  <small><p class="title">UA English,Hindi,Telugu,Tamil</p></small>
+                  <a href="@{/show/{id} (id=${id})}"><button class="button button1">Book</button></a>
+              </div>
+          </div>
+      </div>
+
+  </div>

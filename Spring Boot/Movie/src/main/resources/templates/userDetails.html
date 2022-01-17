@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>USer Details</title>
+    <link rel="stylesheet" href="/Home.css"/>
+    <script src="https://kit.fontawesome.com/e3fa0230bd.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<header>
+    <h2><a href="/">Bookmyshow</a></h2>
+    <nav>
+
+        <li><a href="/movie">Home</a></li>
+        <li><a href="#" th:text="${username}"></a></li>
+        <li><a th:href="@{/{username}/myBookings (username=${username})}">My Bookings</a></li>
+        <li><a th:href="@{/userDetails/{id} (id=${username})}">User Details</a></li>
+        <li><a href="/login">Logout</a></li>
+    </nav>
+</header>
+<section class="banner-area">
+    <div class="banner-img"></div>
+    <div class="center">
+        <h1>User Details</h1>
+        <span th:text="${message}"/>
+        <form method="post" action="/userDetails">
+            <table cellpadding="2" align="left">
+                <tr>
+                    <td><h4>Name</h4> <td><h4> : </h4></td> <td><h4><span th:text=" ${name}"/></h4></td>
+                </tr>
+                <tr>
+                    <td><h4>Username</h4></td> <td><h4> : </h4></td> <td><h4><span th:text=" ${username}"/></h4></td>
+                </tr>
+                <tr>
+                    <td><h4>Password</h4></td> <td><h4> : </h4></td> <td><h4><span th:text=" ${password}"/></h4></td>
+                </tr>
+                <tr>
+                    <td><h4>Contact</h4></td> <td><h4> : </h4></td> <td> <h4><span th:text=" ${contact}"/></h4></td>
+                </tr>
+                <tr>
+                    <td><h4>Email</h4></td> <td><h4> : </h4></td> <td><h4><span th:text=" ${email}"/></h4></td>
+                </tr>
+                <tr>
+                    <td><h4>Address</h4></td> <td><h4> : </h4></td> <td><h4><span th:text=" ${address}"/></h4></td>
+                </tr>
+            </table>
+            <br><br><br><br>
+            <div class="update_link">
+                <br><br>
+                <button><a th:href="@{/updateDetails/{id} (id=${username})}">Update</a></button>
+            </div>
+        </form>
+    </div>
+</section>
+</body>
+</html>
