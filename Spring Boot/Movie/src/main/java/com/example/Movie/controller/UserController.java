@@ -82,10 +82,9 @@ public class UserController {
         return "movies";
     }
 
-
-    @RequestMapping("/{username}/userDetails/{id}")
-    public String userDetails(@PathVariable String username, @PathVariable String id, Model model){
-        model.addAttribute("username",userService.findUserByUsername(username));
+    @RequestMapping("/userDetails/{id}")
+    public String userDetails(@PathVariable String id, Model model){
+        model.addAttribute("username",(id));
         User user = userService.findUserByUsername(id);
         model.addAttribute("password",user.getPassword());
         model.addAttribute("name",user.getName());
@@ -97,15 +96,14 @@ public class UserController {
     }
 
 
-    @RequestMapping("/{username}/updateDetails/{id}")
-    public String updateDetailsForm(@PathVariable String username, @PathVariable String id, Model model){
-        model.addAttribute("username",userService.findUserByUsername(username));
+    @RequestMapping("/updateDetails/{id}")
+    public String updateDetailsForm(@PathVariable String id, Model model){
+        model.addAttribute("user",userService.findUserByUsername(id));
         return "updateDetails";
     }
 
-
-    @PostMapping("{username}/updateDetails")
-    public String updateDetails(@PathVariable String username, Model model,HttpServletRequest request){
+    @PostMapping("/updateDetails")
+    public String updateDetails(Model model,HttpServletRequest request){
 
         User existingUser = userService.findUserByUsername(request.getParameter("username"));
         existingUser.setPassword(request.getParameter("password"));
@@ -125,7 +123,7 @@ public class UserController {
 
         model.addAttribute("message", "Updated successfully");
 
-        return "movies";
+        return "userDetails";
     }
 
 

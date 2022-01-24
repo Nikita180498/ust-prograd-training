@@ -11,8 +11,8 @@
     <h2><a href="/">Bookmyshow</a></h2>
     <nav>
 
-        <li><a href="/movie">Home</a></li>
-        <li><a href="#" th:text="${username}"></a></li>
+        <li><a href="/">Home</a></li>
+<!--        <li><a href="#" th:text="${username}"></a></li>-->
         <li><a th:href="@{/{username}/myBookings (username=${username})}">My Bookings</a></li>
         <li><a th:href="@{/userDetails/{id} (id=${username})}">User Details</a></li>
         <li><a href="/login">Logout</a></li>
