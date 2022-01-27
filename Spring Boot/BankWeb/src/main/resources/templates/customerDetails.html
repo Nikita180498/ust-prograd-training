@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Customer Details</title>
+    <link rel="stylesheet" href="/Home.css"/>
+    <script src="https://kit.fontawesome.com/e3fa0230bd.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<header>
+    <h2><a href="/">ABC BANK</a></h2>
+    <nav>
+
+        <li><a href="/">Home</a></li>
+        <li><a th:href="@{/customerDetails/{id} (id=${userName})}">Customer Details</a></li>
+        <li><a th:href="@{/accountDetails/{id} (id=${accountNumber})}">Account Details</a></li>
+        <li><a th:href="@{/deposit/{id} (id=${accountNumber})}">Deposit</a></li>
+        <li><a th:href="@{/withdraw/{id} (id=${accountNumber})}">Withdraw</a></li>
+        <li><a th:href="@{/fundTransfer/{id} (id=${accountNumber})}">Fund Transfer</a></li>
+        <li><a href="/login">Logout</a></li>
+    </nav>
+</header>
+<section class="banner-area">
+    <div class="banner-img"></div>
+    <div class="center">
+        <h1>Customer Details</h1>
+        <span th:text="${message}"/>
+        <form method="post" action="/customerDetails">
+            <table cellpadding="2" align="left">
+                <tr>
+                    <td><h4>Name</h4> <td><h4> : </h4></td> <td><h4><span th:text=" ${customerName}"/></h4></td>
+                </tr>
+                <tr>
+                    <td><h4>Username</h4></td> <td><h4> : </h4></td> <td><h4><span th:text=" ${userName}"/></h4></td>
+                </tr>
+                <tr>
+                    <td><h4>Password</h4></td> <td><h4> : </h4></td> <td><h4><span th:text=" ${password}"/></h4></td>
+                </tr>
+                <tr>
+                    <td><h4>Contact</h4></td> <td><h4> : </h4></td> <td> <h4><span th:text=" ${Contact}"/></h4></td>
+                </tr>
+                <tr>
+                    <td><h4>Email</h4></td> <td><h4> : </h4></td> <td><h4><span th:text=" ${Email}"/></h4></td>
+                </tr>
+                <tr>
+                    <td><h4>Address</h4></td> <td><h4> : </h4></td> <td><h4><span th:text=" ${Address}"/></h4></td>
+                </tr>
+                <tr>
+                    <td><h4>Account Number</h4></td> <td><h4> : </h4></td> <td><h4><span th:text=" ${accountNumber}"/></h4></td>
+                </tr>
+                <tr>
+                    <td><h4>Balance</h4></td> <td><h4> : </h4></td> <td><h4><span th:text=" ${balance}"/></h4></td>
+                </tr>
+            </table>
+            <br><br><br><br>
+            <div class="update_link">
+                <br><br>
+                <button><a th:href="@{/updateDetails/{id} (id=${userName})}">Update</a></button>
+            </div>
+        </form>
+    </div>
+</section>
+</body>
+</html>

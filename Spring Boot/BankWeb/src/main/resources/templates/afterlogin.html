@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Customer Details</title>
+    <link rel="stylesheet" href="/Home.css"/>
+    <script src="https://kit.fontawesome.com/e3fa0230bd.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<header>
+    <h2><a href="/">ABC BANK</a></h2>
+    <nav>
+
+        <li><a href="/afterlogin">Home</a></li>
+        <li><a th:href="@{/customerDetails/{id} (id=${userName})}">Customer Details</a></li>
+        <li><a th:href="@{/accountDetails/{id} (id=${accountNumber})}">Account Details</a></li>
+        <li><a th:href="@{/deposit/{id} (id=${accountNumber})}">Deposit</a></li>
+        <li><a th:href="@{/withdraw/{id} (id=${accountNumber})}">Withdraw</a></li>
+        <li><a th:href="@{/fundTransfer/{id} (id=${accountNumber})}">Fund Transfer</a></li>
+        <li><a href="/login">Logout</a></li>
+    </nav>
+</header>
+<section class="banner-area">
+    <div class="banner-img"></div>
+    <h1>Welcome to ABC Bank <br> <span th:text=" ${customerName}"/></h1>
+</section></body>
+</html>

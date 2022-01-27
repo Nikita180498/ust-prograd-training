@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Update Details</title>
+    <script src="https://kit.fontawesome.com/e3fa0230bd.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/Home.css"/>
+</head>
+<body>
+<header>
+    <h2><a href="/">ABC BANK</a></h2>
+    <nav>
+
+        <li><a href="/">Home</a></li>
+        <li><a th:href="@{/customerDetails/{id} (id=${userName})}">Customer Details</a></li>
+        <li><a th:href="@{/accountDetails/{id} (id=${accountNumber})}">Account Details</a></li>
+        <li><a th:href="@{/deposit/{id} (id=${accountNumber})}">Deposit</a></li>
+        <li><a th:href="@{/withdraw/{id} (id=${accountNumber})}">Withdraw</a></li>
+        <li><a th:href="@{/fundTransfer/{id} (id=${accountNumber})}">Fund Transfer</a></li>
+        <li><a href="/login">Logout</a></li>
+    </nav>
+</header>
+<section class="banner-area">
+    <div class="banner-img"></div>
+    <div class="center">
+        <h1>Update Details</h1>
+        <form method="post" action="/updateDetails">
+            <div class="txt_field1">
+                <input type="text" name="userName" th:value="${customer.userName}" required>
+                <span></span>
+                <label>Username</label>
+            </div>
+            <div class="txt_field1">
+                <input type="text" name="password" th:value="${customer.password}" required>
+                <span></span>
+                <label>Password</label>
+            </div>
+            <div class="txt_field1">
+                <input type="text" name="customerName" th:value="${customer.customerName}" required>
+                <span></span>
+                <label>Name</label>
+            </div>
+            <div class="txt_field1">
+                <input type="text" name="Contact" th:value="${customer.Contact}" required>
+                <span></span>
+                <label>Contact</label>
+            </div>
+            <div class="txt_field1">
+                <input type="text" name="Email" th:value="${customer.Email}" required>
+                <span></span>
+                <label>Email</label>
+            </div>
+            <div class="txt_field1">
+                <input type="text" name="Address" th:value="${customer.Address}" required>
+                <span></span>
+                <label>Address</label>
+            </div>
+
+            <input type="submit" value="Update Details">
+        </form>
+    </div>
+</section>
+</body>
+</html>

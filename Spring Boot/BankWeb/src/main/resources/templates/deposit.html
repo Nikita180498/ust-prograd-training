@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Deposit</title>
+    <script src="https://kit.fontawesome.com/e3fa0230bd.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/Home.css"/>
+</head>
+<body>
+<header>
+    <h2><a href="/">ABC BANK</a></h2>
+    <nav>
+
+        <li><a href="/">Home</a></li>
+        <li><a th:href="@{/customerDetails/{id} (id=${userName})}">Customer Details</a></li>
+        <li><a th:href="@{/accountDetails/{id} (id=${accountNumber})}">Account Details</a></li>
+        <li><a th:href="@{/deposit/{id} (id=${accountNumber})}">Deposit</a></li>
+        <li><a th:href="@{/withdraw/{id} (id=${accountNumber})}">Withdraw</a></li>
+        <li><a th:href="@{/fundTransfer/{id} (id=${accountNumber})}">Fund Transfer</a></li>
+        <li><a href="/login">Logout</a></li>
+    </nav>
+</header>
+<section class="banner-area">
+    <div class="banner-img"></div>
+    <div class="center">
+        <h6><small><span th:text="${message}"/></small></h6>
+        <h1>Deposit</h1>
+
+        <form th:action="@{/deposit/{id} (id=${accountNumber})}" method="post">
+            <div class="txt_field1">
+                <label for="amount">Deposit money</label>
+                <input type="text" id="amount" name="amount" required>
+            </div>
+            <button type="submit">Deposit</button>
+        </form>
+    </div>
+</section>
+</body>
+</html>
